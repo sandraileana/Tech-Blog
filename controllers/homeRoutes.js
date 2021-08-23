@@ -1,17 +1,42 @@
-const router = require('express').Router();
-const { Example } = require('../models');
+const router = require("express").Router();
+const { Post, User } = require("../models");
 
-router.get('/', async (req, res) => {
+// Get all the posts of all users and render the homepage
+router.get("/", async (req, res) => {
   try {
-    // Get all examples 
-    const exampleData = await Example.findAll();
+    const postData = await Post.findAll({
+      include: {
+        model: User,
+        attributes: ['name']
+      },
+      raw:true,
+      nest:true
+    });
+    res.render("homepage", {
+      postData,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-    // Serialize data so the template can read it
-    const examples = exampleData.map((example) => example.get({ plain: true }));
+// render the loging page
+router.get("/login", async (req, res) => {
+  try {
+    res.render("login", {
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-    // Pass serialized data
-    res.render('homepage', { 
-      examples, 
+// render the signup page
+router.get("/signup", (req, res) => {
+  try {
+    res.render("signup", {
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);

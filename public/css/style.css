@@ -1,1 +1,122 @@
 /* Styles go here */
+
+body{
+    background-color: whitesmoke;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.nav-bar-custom{
+    background-color: #2e1253;
+    font-size: 30px;
+}
+
+.nav-bar-custom li{
+    padding: 0 25px;
+}
+
+.title-container{
+    background-color: #2e1253;
+    padding: 15px 0;
+}
+
+.title-tag{
+    display: inline-block;
+    background-color: whitesmoke;
+    margin: 0 0 20px 30px;
+    padding: 10px 30px;
+    font-size: 30px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: #2e1253;
+    font-weight: bold;
+    box-shadow: 10px 10px rgb(219, 215, 206);
+}
+
+.card-element{
+    display: block;
+    margin: 20px 30px;
+    background-color: #2e1253;
+    padding: 5px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title{
+    color:whitesmoke;
+    width: 60%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card-creator{
+    color:whitesmoke;
+    width: 30%;
+    text-align: right;
+    font-size: 20px;
+    align-self: center;
+}
+
+.card-content{
+    background-color: whitesmoke;
+    color: #2e1253;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.form-title{
+    color:whitesmoke;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 0 5px 10px;
+}
+
+.form-body{
+    background-color: whitesmoke;
+    padding: 5px 20px;
+    margin:0px;
+}
+
+.form-attachment{
+    margin: 10px 0;
+}
+
+.post-element{
+    background-color: #6b1d8f;
+    margin: 20px 30px;
+    border-radius: 10px;
+}
+
+.post-title{
+    color:whitesmoke;
+    width: 60%;
+    text-align: left;
+    font-size: 25px;
+}
+
+.post-creator{
+    color:whitesmoke;
+    width: 30%;
+    text-align: right;
+    font-size: 25px;
+    align-self: center;
+}
+
+.edit-header{
+    color:whitesmoke;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.edit-inner-header{
+    color: #2e1253;
+    font-size: 25px;;
+}

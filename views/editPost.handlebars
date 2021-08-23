@@ -1,0 +1,29 @@
+<div class="title-container">
+  <div class="title-tag">
+    Your Dashboard
+  </div>
+</div>
+
+<div class="card-element">
+  <div class="card-header edit-header">
+    Edit Post
+  </div>
+  <div class="card-content">
+
+    <form class="form-body comment-form">
+      <label for="commentBox" class="edit-inner-header">Title</label>
+      <textarea class="form-control" id="title-box" rows="1">{{postData.title}}</textarea>
+
+      <label for="commentBox" class="edit-inner-header">Content</label>
+      <textarea class="form-control" id="content-box" rows="3">{{postData.content}}</textarea>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-secondary mt-3" name="action" value="update">Update Post</button>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-secondary mt-3" name="action" value="delete">Delete</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/editPost.js"></script>

@@ -1,20 +1,36 @@
-<div class="column">
-<h2 class="title pb-4">login:</h2><hr>
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+<div class="title-container">
+  <div class="title-tag">
+    The Tech Blog
   </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit" class="button is-primary">login</button>
-    <a href="/signup"><button type="button" class="button is-danger">signup</button></a>
-  </div>
-</form>
 </div>
 
-<!-- javascript file-->
-<script src="/javascript/login.js"></script>
+<div class="container-fluid">
+  <div class="card-element">
+    <div class="form-title">
+      Login
+    </div>
+    <form class="form-body login-form">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username-input"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password-input" />
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-secondary">Login</button>
+      </div>
+      <div class="form-attachment">
+        <a href="/signup">Sign up insted</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/login.js"></script>

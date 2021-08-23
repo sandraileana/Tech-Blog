@@ -1,0 +1,55 @@
+<div class="title-container">
+  <div class="title-tag">
+    The Tech Blog
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="card-element">
+    <div class="card-header">
+      <div class="card-title">
+        {{postData.title}}
+      </div>
+      <div class="card-creator">
+        {{postData.user.name}}
+      </div>
+    </div>
+    <div class="card-content">
+      {{postData.content}}
+    </div>
+  </div>
+
+  {{#each commentData as |comment|}}
+    <div class="card-element">
+      <div class="card-header">
+        <br />
+      </div>
+      <div class="card-content">
+        {{comment.content}}
+        <br />
+        <br />
+        -{{comment.user.name}},
+        {{format_date comment.date}}
+      </div>
+    </div>
+  {{/each}}
+
+  {{#if logged_in}}
+    <div class="card-element">
+      <div class="card-header">
+        <br />
+      </div>
+      <div class="card-content">
+        <form class="form-body comment-form">
+          <label for="commentBox" class="mb-3">Comment</label>
+          <textarea class="form-control" id="comment-box" rows="3"></textarea>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-secondary mt-3">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/post.js"></script>
+  {{/if}}
+</div>
